@@ -209,7 +209,6 @@
 </html>
 
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -221,14 +220,17 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
         h1 {
             font-size: 24px;
-            background: linear-gradient(90deg, #017cfe, #e7e8f2);
-            color: rgb(255, 255, 255);
+            background: linear-gradient(90deg, #007bff, #00c6ff);
+            color: white;
             padding: 15px;
             border-radius: 10px;
             animation: fadeIn 1.5s;
+            margin: 20px 0;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -236,9 +238,11 @@
         }
         .catalogo {
             display: flex;
-            justify-content: center;
+            flex-direction: column; /* Alinhar os produtos verticalmente */
+            align-items: center;
             gap: 20px;
             margin-top: 30px;
+            padding: 0 10px;
         }
         .produto {
             background: #fff;
@@ -246,6 +250,9 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
+            width: 100%;
+            max-width: 300px; /* Ajustar o tamanho máximo do produto */
+            margin-bottom: 20px;
         }
         .produto img {
             width: 150px;
@@ -326,30 +333,28 @@
 </head>
 <body>
     <h1>Faça uma simulação e veja como é simples vender com apenas um clique! 🚀</h1>
-    <h2>assim que adicionar os produtos ao carrinho e chegarem a 6 unidades os produtos entra no valor de atacado tenha sua experiencia hoje mesmo !! </h2>
     <div class="catalogo">
         <!-- Produto 1 - Varejo e Atacado -->
-
         <div class="produto">
-            <img src="https://i.im.ge/2025/03/28/p59yih.download.jpeg" alt="Produto 2">
-            <h3>Produto 1 (bolças)</h3>
-            <p>Varejo: R$ 80,00 | Atacado: R$ 60,00</p>
-            <label for="numeracao2">Numeração:</label>
-            <select id="numeracao2">
-                <option value="unico">unico</option>
-            
+            <img src="https://i.im.ge/2025/03/28/p59yih.download.jpeg" alt="Produto 1">
+            <h3>Produto 1</h3>
+            <p>Varejo: R$ 50,00 | Atacado: R$ 40,00</p>
+            <label for="tamanho1">Tamanho:</label>
+            <select id="tamanho1">
+                <option value="P">P</option>
+                <option value="M">M</option>
+                <option value="G">G</option>
             </select>
-           <P></P> <label for="cor2">Cor:</label>
-            <select id="cor2">
-                <option value="branca">branca</option>
-                <option value="verde">verde</option>
-                <option value="marrom">marrom</option>
+            <label for="cor1">Cor:</label>
+            <select id="cor1">
+                <option value="azul">Azul</option>
+                <option value="verde">Verde</option>
+                <option value="vermelho">Vermelho</option>
             </select>
-           <p> <label for="quantidade2">Quantidade:</label>
-            <input type="number" id="quantidade2" value="1" min="1" max="10">
-            <button onclick="adicionarAoCarrinho('Produto 2', 'https://i.im.ge/2025/03/28/p59yih.download.jpeg', 80.00, 60.00, 'numeracao2', 'cor2', 'quantidade2')">Adicionar</button>
+            <label for="quantidade1">Quantidade:</label>
+            <input type="number" id="quantidade1" value="1" min="1" max="10">
+            <button onclick="adicionarAoCarrinho('Produto 1', 'https://i.im.ge/2025/03/28/p59yih.download.jpeg', 50.00, 40.00, 'tamanho1', 'cor1', 'quantidade1')">Adicionar</button>
         </div>
-        
 
         <!-- Produto 2 - Calçado (Com numeração) -->
         <div class="produto">
@@ -365,13 +370,13 @@
                 <option value="39">39</option>
                 <option value="40">40</option>
             </select>
-           <P></P> <label for="cor2">Cor:</label>
+            <label for="cor2">Cor:</label>
             <select id="cor2">
-                <option value="cinza claro">cinza claro</option>
-                <option value="azul escuro">azul escuro</option>
-                <option value="cinza escuro">Cinza escuro</option>
+                <option value="preto">Preto</option>
+                <option value="branco">Branco</option>
+                <option value="cinza">Cinza</option>
             </select>
-           <p> <label for="quantidade2">Quantidade:</label>
+            <label for="quantidade2">Quantidade:</label>
             <input type="number" id="quantidade2" value="1" min="1" max="10">
             <button onclick="adicionarAoCarrinho('Produto 2', 'https://i.im.ge/2025/03/27/p5uOSC.images-1.jpeg', 80.00, 60.00, 'numeracao2', 'cor2', 'quantidade2')">Adicionar</button>
         </div>
@@ -388,13 +393,13 @@
                 <option value="G">G</option>
                 <option value="GG">GG</option>
             </select>
-           <p> <label for="cor3">Cor:</label>
+            <label for="cor3">Cor:</label>
             <select id="cor3">
                 <option value="preto">Preto</option>
                 <option value="branco">Branco</option>
                 <option value="azul">Azul</option>
             </select>
-           <p></p> <label for="quantidade3">Quantidade:</label>
+            <label for="quantidade3">Quantidade:</label>
             <input type="number" id="quantidade3" value="1" min="1" max="10">
             <button onclick="adicionarAoCarrinho('Produto 3', 'https://i.im.ge/2025/03/27/p5uuv4.images.jpeg', 35.00, 30.00, 'tamanho3', 'cor3', 'quantidade3')">Adicionar</button>
         </div>
@@ -410,7 +415,6 @@
     <div class="overlay" id="overlay">
         <div class="overlay-content">
             <h2>Compra finalizada com sucesso! 🎉</h2>
-            <h3>assim que os cliente finalizar a compra o pedido e envia e chegara organizado em seus whatsapp com todas as informação e detalhes da compra 🎉</h3>
             <p id="detalhesPedido"></p>
             <button onclick="fecharOverlay()">Fechar</button>
         </div>
