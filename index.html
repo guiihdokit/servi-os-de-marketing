@@ -345,13 +345,13 @@
                 <option value="M">M</option>
                 <option value="G">G</option>
             </select>
-            <label for="cor1">Cor:</label>
+           <p></p> <label for="cor1">Cor:</label>
             <select id="cor1">
                 <option value="azul">Azul</option>
                 <option value="verde">Verde</option>
                 <option value="vermelho">Vermelho</option>
             </select>
-            <label for="quantidade1">Quantidade:</label>
+          <p></p>  <label for="quantidade1">Quantidade:</label>
             <input type="number" id="quantidade1" value="1" min="1" max="10">
             <button onclick="adicionarAoCarrinho('Produto 1', 'https://i.im.ge/2025/03/28/p59yih.download.jpeg', 50.00, 40.00, 'tamanho1', 'cor1', 'quantidade1')">Adicionar</button>
         </div>
@@ -370,13 +370,13 @@
                 <option value="39">39</option>
                 <option value="40">40</option>
             </select>
-            <label for="cor2">Cor:</label>
+          <p></p>  <label for="cor2">Cor:</label>
             <select id="cor2">
                 <option value="preto">Preto</option>
                 <option value="branco">Branco</option>
                 <option value="cinza">Cinza</option>
             </select>
-            <label for="quantidade2">Quantidade:</label>
+           <p></p> <label for="quantidade2">Quantidade:</label>
             <input type="number" id="quantidade2" value="1" min="1" max="10">
             <button onclick="adicionarAoCarrinho('Produto 2', 'https://i.im.ge/2025/03/27/p5uOSC.images-1.jpeg', 80.00, 60.00, 'numeracao2', 'cor2', 'quantidade2')">Adicionar</button>
         </div>
@@ -393,13 +393,13 @@
                 <option value="G">G</option>
                 <option value="GG">GG</option>
             </select>
-            <label for="cor3">Cor:</label>
+           <p></p> <label for="cor3">Cor:</label>
             <select id="cor3">
                 <option value="preto">Preto</option>
                 <option value="branco">Branco</option>
                 <option value="azul">Azul</option>
             </select>
-            <label for="quantidade3">Quantidade:</label>
+           <p></p> <label for="quantidade3">Quantidade:</label>
             <input type="number" id="quantidade3" value="1" min="1" max="10">
             <button onclick="adicionarAoCarrinho('Produto 3', 'https://i.im.ge/2025/03/27/p5uuv4.images.jpeg', 35.00, 30.00, 'tamanho3', 'cor3', 'quantidade3')">Adicionar</button>
         </div>
@@ -409,12 +409,13 @@
         <h2>Carrinho de Compras</h2>
         <ul id="listaCarrinho"></ul>
         <p>Total: R$ <span id="total">0.00</span></p>
-        <button class="finalizar-compra" onclick="finalizarCompra()">Finalizar Compra</button>
+        <button class="finalizar-compra" onclick="finalizarCompra()">simulação de Compra</button>
     </div>
     
     <div class="overlay" id="overlay">
         <div class="overlay-content">
             <h2>Compra finalizada com sucesso! 🎉</h2>
+            <h3>Assim que finalizar seus pedidos enviaremos uma mensagem organizada e detalhada em seus whatsapp com o resumo da compra</h3>
             <p id="detalhesPedido"></p>
             <button onclick="fecharOverlay()">Fechar</button>
         </div>
